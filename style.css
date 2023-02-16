@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    color: #373F41;
+}
+
+header {
+    height: 100vh;
+    width: 99vw;
+    overflow-x: hidden;
+}
+
+.top {
+    width: 100%;
+    height: 10vh;
+    background-color: #EFF3FF;
+    padding: 24px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top__left svg {
+    cursor: pointer;
+}
+
+.top__center a{
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 30px;
+    font-weight: 600;
+}
+
+.top__right a{
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.top__right > i{
+    display: none;
+}
+
+.top__center a::after,
+.top__right a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3C64B1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.top__center a:hover::after,
+.top__right a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.top__right button {
+    height: 40px;
+    width: 107px;
+    padding: 11px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #3C64B1;
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+.top__right button:hover{
+    color: #3C64B1;
+    background-color: #FFFFFF;
+    border: 1px solid #3C64B1;
+}
+
+.header--text{
+    height: 90vh;
+    width: 100%;
+    background-image: url(./image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header--text__content{
+    width: 730px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header--text__content > p:first-child{
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.header--text__content > p:nth-child(2){
+    font-size: 16px;
+    font-weight: 400;
+    color: #737B7D;
+}
+
+.header--text__button button{
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.header--text__button > button:first-child{
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    background-color: #3C64B1;
+    color: #FFFFFF;
+    margin-right: 24px;
+}
+
+.header--text__button > button:first-child:hover{
+    color: #3C64B1;
+    background-color: #FFFFFF;
+    border: 1px solid #3C64B1;
+}
+
+.header--text__button > button:nth-child(2){
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #3C64B1;
+    background-color: transparent;
+    color: #3C64B1;
+}
+
+.header--text__button > button:nth-child(2):hover{
+    color: #FFFFFF;
+    background-color: #3C64B1;
+    border: none;
+}
+
+.container{
+    background-color: #EFF3FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.title{
+    text-align: center;
+    margin: 80px 0 60px 0;
+}
+
+.title > p:first-child{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.title > p:last-child{
+    font-weight: 400;
+    font-size: 16px;
+    color: #737B7D;
+}
+
+.discorver{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 180px;
+}
+
+.col{
+    text-align: center;
+    margin-right: 24px; 
+}
+
+.col svg{
+    margin: 20px 0;
+    transition-duration: 1s;
+}
+
+.col:hover svg{
+    transform: scale(2);
+}
+
+.col > p:nth-child(2){
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.col > p:nth-child(3){
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.col > a{
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3C64B1;
+    text-decoration: none;
+}
+
+.col a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3C64B1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.col a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.describe{
+    display: flex;
+    margin: 80px 120px 0;
+}
+
+.describe img{
+    flex-basis: 50%;
+    width: 600px;
+    height: 420px;
+}
+
+.des__text--right{
+    flex-basis: 50%;
+    padding-left: 40px;
+}
+
+.text__title--right{
+    font-weight: 700;
+    font-size: 30px;
+    margin: 40px 20px 20px 0;
+}
+
+.text__description--right{
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #737B7D;
+}
+
+.input{
+    display: flex;
+}
+
+.input input{
+    margin-right: 20px;
+    padding: 11px 0 11px 20px;
+    border: none;
+    background-color: #F4F5F4;
+    height: 40px;
+    transition: all 0.5s ease;
+    width: 405px;
+    height: 40px;
+}
+
+.input input:focus{
+    outline: none;
+    border: 1px solid #373F41;
+}
+
+.input button{
+    width: 135px;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #3C64B1;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.des__text--right > p:last-child{
+    font-weight: 600;
+    font-size: 12px;
+    color: #737B7D;
+    margin-top: 16px;
+}
+
+.des__text--left{
+    flex-basis: 50%;
+    padding-right: 40px;
+}
+
+.text__title--left{
+    font-weight: 700;
+    font-size: 30px;
+    margin: 40px 20px 60px 0;
+}
+
+.text__description--left{
+    display: flex;
+}
+
+.des__left--col {
+    font-weight: 400;
+    font-size: 16px;
+    color: #737B7D;
+    margin-right: 30px;
+}
+
+.des__left--col svg{
+    margin-bottom: 20px;
+    transition-duration: 1s;
+}
+
+.des__left--col:hover svg{
+    transform: scale(2);
+}
+
+.detail{
+    display: flex;
+    margin: 80px 120px;
+}
+
+.detail__col{
+    text-align: center;
+}
+
+#detail__col1, #detail__col2, #detail__col3{
+    margin-right: 80px;
+} 
+
+.detail__col img{
+    width: 240px;
+    height: 240px;
+    margin-bottom: 20px;
+    transition: all 1s ease-in;
+}
+
+.detail__col img:hover{
+    transform: scale(1.1);
+}
+
+.detail__title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.detail__des{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.slideup{
+    visibility: hidden;
+}
+
+.slide{
+    animation: slide 1s;
+    visibility: visible;
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        transform: translateY(75%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 1024px){
+    .top{
+        padding: 24px 80px;
+    }
+
+    .discorver{
+        margin: 0 90px;
+    }
+
+    .describe img{
+        flex-basis: 50%;
+        width: 400px;
+        height: 320px;
+    }
+
+    .text__title--right{
+        font-size: 24px;
+        margin: 0 20px 20px 0;
+    }
+
+    .text__title--left{
+        font-size: 24px;
+        margin: 0 20px 20px 0;
+    }
+    
+
+    .input input{
+        width: 240px;
+        height: 40px;
+    }
+    
+
+    .detail{
+        flex-wrap: wrap;
+        margin: 80px 20px;
+    }
+
+    #detail__col1, #detail__col2, #detail__col3, #detail__col4{
+        margin: 0 0 20px 0;
+        padding: 0 40px;
+        flex-basis: 50%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .top{
+        padding: 12px 40px;
+    }
+
+    .top__center a{
+        margin-right: 15px;
+    }
+
+    .header--text__content{
+        width: 600px;
+    }
+
+    .discorver{
+        margin: 0 40px;
+    }
+
+    .describe{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .describe img{
+        flex-basis: 100%;
+        width: 600px;
+        height: 420px;
+        order: 1;
+    }
+    
+    .des__text--right{
+        flex-basis: 100%;
+        padding-left: 0;
+        order: 2;
+        width: 600px;
+    }
+
+    .des__text--left{
+        flex-basis: 100%;
+        padding-right: 40px;
+        order: 2;
+        width: 600px;
+    }
+
+    .detail{
+        flex-wrap: wrap;
+        margin: 80px 20px;
+    }
+
+    #detail__col1, #detail__col2, #detail__col3, #detail__col4{
+        margin: 0 0 20px 0;
+        padding: 0 40px;
+        flex-basis: 50%;
+    } 
+    
+}
+
+@media (max-width: 425px) {
+    .top{
+        position: fixed;
+        padding: 6px 30px;
+    }
+    .top__center{
+        display: none;
+        position: fixed;
+        width: 100%;
+        max-width: 40vw;
+        height: 20vh;
+        background-color: #EFF3FF;
+        top: 10vh;
+        right: 10vw;
+        padding: 20px 20px;
+        box-sizing: border-box;
+    }
+
+    .top__center a{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .top__right > i{
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    .top__right{
+        display: flex;
+        align-items: center;
+    }
+
+    .top__right button {
+        height: 32px;
+        width: 90px;
+        padding: 6px 10px;
+    }
+
+    .header--text{
+        height: 100vh;
+    }
+
+    .header--text__content{
+        width: 320px;
+    }
+
+    .header--text__content > p:first-child{
+        font-size: 24px;
+    }
+
+    .title{
+        margin: 40px 20px;
+    }
+
+    .title > p:first-child{
+        font-size: 24px;
+    }
+
+    .discorver{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 20px 20px;
+    }
+
+    .col{
+        margin: 0 0 20px 0; 
+    }
+
+    .describe{
+        margin: 20px 60px 0;
+    }
+
+    .describe img{
+        flex-basis: 50%;
+        width: 320px;
+        height: 200px;
+    }
+
+    .des__text--right{
+        width: 320px;
+    }
+
+    .text__title--right{
+        font-size: 20px;
+        margin: 20px 20px 20px 0;
+    }
+    
+    .text__description--right{
+        font-size: 12px;
+    }
+
+    .input input{
+        margin-right: 20px;
+        width: 240px;
+        height: 40px;
+    }
+
+    .input button{
+        width: 160px;
+        height: 40px;
+        padding: 5px 10px;
+    }
+
+    .des__text--left{
+        width: 320px;
+        padding-right: 0;
+    }
+
+    .text__title--left{
+        font-size: 20px;
+        margin: 20px 20px 20px 0;
+    }
+
+    .detail{
+        flex-wrap: wrap;
+        margin: 40px 10px;
+    }
+
+    #detail__col1, #detail__col2, #detail__col3, #detail__col4{
+        margin: 0 0 40px 0;
+        padding: 0 20px;
+        flex-basis: 50%;
+    } 
+
+    .detail__col img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .detail__title{
+        font-size: 16px;
+    }
+    
+    
+}
